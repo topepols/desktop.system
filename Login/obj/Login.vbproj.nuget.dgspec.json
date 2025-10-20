@@ -50,6 +50,7 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+<<<<<<< HEAD
             "AForge.Video": {
               "target": "Package",
               "version": "[2.2.5, )"
@@ -69,6 +70,15 @@
             "ZXing.Net": {
               "target": "Package",
               "version": "[0.16.10, )"
+=======
+            "Google.Cloud.Firestore": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "ZXing.Net": {
+              "target": "Package",
+              "version": "[0.16.11, )"
+>>>>>>> 4f46b6c (Fix Firestore and QR references)
             }
           },
           "imports": [

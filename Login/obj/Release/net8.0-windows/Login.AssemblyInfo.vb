@@ -14,13 +14,9 @@ Option Explicit On
 Imports System
 Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("Login"),  _
- Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
+ Assembly: System.Reflection.AssemblyConfigurationAttribute("Release"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
-<<<<<<< HEAD
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+918b0e395d1dbda3d537a3130744ca071e063b1b"),  _
-=======
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+747763286f9a90e35351df3e1f5e240fdaba518b"),  _
->>>>>>> 4f46b6c (Fix Firestore and QR references)
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+149a19b2cded7763450287ccc3a7b2b4e0b9c6f8"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("Login"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("Login"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

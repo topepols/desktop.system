@@ -18,6 +18,7 @@ C:\Users\PC\source\repos\Login\Login\obj\Debug\net8.0-windows\ref\Login.dll
 C:\Users\PC\source\repos\Login\Login\obj\Debug\net8.0-windows\Login.Dashboard.resources
 C:\Users\PC\source\repos\Login\Login\obj\Debug\net8.0-windows\Login.Inventory.resources
 C:\Users\PC\source\repos\Login\Login\obj\Debug\net8.0-windows\Login.reports.resources
+<<<<<<< HEAD
 C:\Users\kristopher\Source\Repos\desktop.system\Login\bin\Debug\net8.0-windows\Login.exe
 C:\Users\kristopher\Source\Repos\desktop.system\Login\bin\Debug\net8.0-windows\Login.deps.json
 C:\Users\kristopher\Source\Repos\desktop.system\Login\bin\Debug\net8.0-windows\Login.runtimeconfig.json
@@ -25,6 +26,11 @@ C:\Users\kristopher\Source\Repos\desktop.system\Login\bin\Debug\net8.0-windows\L
 C:\Users\kristopher\Source\Repos\desktop.system\Login\bin\Debug\net8.0-windows\Login.pdb
 C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\Login.Dashboard.resources
 C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\Login.Form1.resources
+=======
+C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\Login.Dashboard.resources
+C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\Login.Form1.resources
+C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\Login.GenerateItemForm.resources
+>>>>>>> 4f46b6c (Fix Firestore and QR references)
 C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\Login.Inventory.resources
 C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\Login.Resources.resources
 C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\Login.reports.resources
@@ -37,6 +43,7 @@ C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\L
 C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\Login.dll
 C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\refint\Login.dll
 C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\Login.pdb
+<<<<<<< HEAD
 C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\Login.genruntimeconfig.cache
 C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\ref\Login.dll
 C:\Users\kristopher\Source\Repos\desktop.system\Login\obj\Debug\net8.0-windows\Login.vbproj.AssemblyReference.cache
@@ -67,3 +74,5 @@ C:\Users\kristopher\Source\Repos\desktop.system\Login\bin\Debug\net8.0-windows\A
 C:\Users\kristopher\Source\Repos\desktop.system\Login\bin\Debug\net8.0-windows\AForge.Video.DirectShow.dll
 C:\Users\kristopher\Source\Repos\desktop.system\Login\bin\Debug\net8.0-windows\QRCoder.dll
 C:\Users\kristopher\Source\Repos\desktop.system\Login\bin\Debug\net8.0-windows\zxing.dll
+=======
+>>>>>>> 4f46b6c (Fix Firestore and QR references)
