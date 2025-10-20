@@ -22,8 +22,9 @@ Partial Class Inventory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
+        PictureBoxQR = New PictureBox()
         PictureBox1 = New PictureBox()
         out = New LinkLabel()
         btnrep = New Button()
@@ -37,7 +38,6 @@ Partial Class Inventory
         Add = New Button()
         search = New Button()
         update = New Button()
-        Label1 = New Label()
         DataGridView1 = New DataGridView()
         Column1 = New DataGridViewTextBoxColumn()
         Column2 = New DataGridViewTextBoxColumn()
@@ -49,16 +49,21 @@ Partial Class Inventory
         Label3 = New Label()
         Label4 = New Label()
         Label5 = New Label()
+        PictureBoxCamera = New PictureBox()
+        btnScanQR = New Button()
         Panel1.SuspendLayout()
+        CType(PictureBoxQR, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel6.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBoxCamera, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
         Panel1.AutoSize = True
         Panel1.BackColor = Color.SpringGreen
+        Panel1.Controls.Add(PictureBoxQR)
         Panel1.Controls.Add(PictureBox1)
         Panel1.Controls.Add(out)
         Panel1.Controls.Add(btnrep)
@@ -66,8 +71,18 @@ Partial Class Inventory
         Panel1.Controls.Add(btnhome)
         Panel1.Location = New Point(1, 38)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(162, 410)
+        Panel1.Size = New Size(212, 414)
         Panel1.TabIndex = 1
+        ' 
+        ' PictureBoxQR
+        ' 
+        PictureBoxQR.BackColor = Color.White
+        PictureBoxQR.Location = New Point(9, 10)
+        PictureBoxQR.Name = "PictureBoxQR"
+        PictureBoxQR.Size = New Size(150, 150)
+        PictureBoxQR.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBoxQR.TabIndex = 0
+        PictureBoxQR.TabStop = False
         ' 
         ' PictureBox1
         ' 
@@ -83,7 +98,7 @@ Partial Class Inventory
         ' 
         out.AutoSize = True
         out.BackColor = Color.MediumAquamarine
-        out.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        out.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         out.LinkBehavior = LinkBehavior.HoverUnderline
         out.LinkColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
         out.LinkVisited = True
@@ -98,7 +113,7 @@ Partial Class Inventory
         ' btnrep
         ' 
         btnrep.BackColor = Color.Peru
-        btnrep.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnrep.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnrep.ForeColor = Color.Transparent
         btnrep.Location = New Point(12, 276)
         btnrep.Name = "btnrep"
@@ -110,7 +125,7 @@ Partial Class Inventory
         ' btnvent
         ' 
         btnvent.BackColor = Color.Peru
-        btnvent.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnvent.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnvent.ForeColor = Color.Transparent
         btnvent.Location = New Point(12, 223)
         btnvent.Name = "btnvent"
@@ -122,7 +137,7 @@ Partial Class Inventory
         ' btnhome
         ' 
         btnhome.BackColor = Color.Peru
-        btnhome.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnhome.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnhome.ForeColor = Color.Transparent
         btnhome.Location = New Point(12, 171)
         btnhome.Name = "btnhome"
@@ -145,11 +160,11 @@ Partial Class Inventory
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = SystemColors.ButtonHighlight
         Label2.Location = New Point(178, 9)
         Label2.Name = "Label2"
-        Label2.Size = New Size(389, 25)
+        Label2.Size = New Size(481, 25)
         Label2.TabIndex = 10
         Label2.Text = "Double JDG Inventory Management Systeem"
         ' 
@@ -172,7 +187,7 @@ Partial Class Inventory
         ' Gen
         ' 
         Gen.BackColor = Color.Peru
-        Gen.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Gen.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Gen.ForeColor = Color.Transparent
         Gen.Location = New Point(179, 48)
         Gen.Name = "Gen"
@@ -184,7 +199,7 @@ Partial Class Inventory
         ' Add
         ' 
         Add.BackColor = Color.Peru
-        Add.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Add.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Add.ForeColor = Color.Transparent
         Add.Location = New Point(189, 97)
         Add.Name = "Add"
@@ -196,7 +211,7 @@ Partial Class Inventory
         ' search
         ' 
         search.BackColor = Color.DarkSlateGray
-        search.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        search.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         search.ForeColor = Color.Transparent
         search.Location = New Point(408, 160)
         search.Name = "search"
@@ -208,7 +223,7 @@ Partial Class Inventory
         ' update
         ' 
         update.BackColor = Color.LightSeaGreen
-        update.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        update.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         update.ForeColor = Color.Transparent
         update.Location = New Point(564, 160)
         update.Name = "update"
@@ -216,17 +231,6 @@ Partial Class Inventory
         update.TabIndex = 17
         update.Text = "Update "
         update.UseVisualStyleBackColor = False
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(189, 192)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(53, 20)
-        Label1.TabIndex = 19
-        Label1.Text = "Search"
         ' 
         ' DataGridView1
         ' 
@@ -236,16 +240,16 @@ Partial Class Inventory
         DataGridView1.BackgroundColor = Color.White
         DataGridView1.BorderStyle = BorderStyle.None
         DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.BackColor = SystemColors.Control
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         DataGridView1.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3})
         DataGridView1.GridColor = Color.White
-        DataGridView1.Location = New Point(189, 249)
+        DataGridView1.Location = New Point(189, 260)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RightToLeft = RightToLeft.No
         DataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
@@ -277,7 +281,7 @@ Partial Class Inventory
         ' delete
         ' 
         delete.BackColor = Color.Crimson
-        delete.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        delete.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         delete.ForeColor = Color.Transparent
         delete.Location = New Point(694, 160)
         delete.Name = "delete"
@@ -343,12 +347,36 @@ Partial Class Inventory
         Label5.TabIndex = 27
         Label5.Text = "Price"
         ' 
+        ' PictureBoxCamera
+        ' 
+        PictureBoxCamera.BackColor = Color.Black
+        PictureBoxCamera.Location = New Point(354, 234)
+        PictureBoxCamera.Name = "PictureBoxCamera"
+        PictureBoxCamera.Size = New Size(200, 150)
+        PictureBoxCamera.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBoxCamera.TabIndex = 0
+        PictureBoxCamera.TabStop = False
+        ' 
+        ' btnScanQR
+        ' 
+        btnScanQR.BackColor = Color.Teal
+        btnScanQR.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        btnScanQR.ForeColor = Color.White
+        btnScanQR.Location = New Point(657, 201)
+        btnScanQR.Name = "btnScanQR"
+        btnScanQR.Size = New Size(120, 40)
+        btnScanQR.TabIndex = 1
+        btnScanQR.Text = "Scan QR"
+        btnScanQR.UseVisualStyleBackColor = False
+        ' 
         ' Inventory
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.PaleGreen
         ClientSize = New Size(800, 450)
+        Controls.Add(PictureBoxCamera)
+        Controls.Add(btnScanQR)
         Controls.Add(Label5)
         Controls.Add(Label4)
         Controls.Add(Label3)
@@ -357,7 +385,6 @@ Partial Class Inventory
         Controls.Add(TextPrice)
         Controls.Add(delete)
         Controls.Add(DataGridView1)
-        Controls.Add(Label1)
         Controls.Add(update)
         Controls.Add(search)
         Controls.Add(Add)
@@ -370,13 +397,16 @@ Partial Class Inventory
         Text = "Inventory"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        CType(PictureBoxQR, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel6.ResumeLayout(False)
         Panel6.PerformLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBoxCamera, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
+
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
@@ -389,10 +419,12 @@ Partial Class Inventory
     Friend WithEvents TextSearch As TextBox
     Friend WithEvents RichTextBox2 As RichTextBox
     Friend WithEvents Gen As Button
+    Friend WithEvents PictureBoxQR As PictureBox
+    Friend WithEvents btnScanQR As Button
+    Friend WithEvents PictureBoxCamera As PictureBox
     Friend WithEvents Add As Button
     Friend WithEvents search As Button
     Friend WithEvents update As Button
-    Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents delete As Button
     Friend WithEvents TextPrice As TextBox

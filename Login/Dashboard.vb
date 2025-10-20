@@ -18,7 +18,7 @@
     End Sub
 
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
-        DataGridView2.DataSource = Form1.dt
+        DataGridView2.DataSource = Form1
         DataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
     End Sub
 End Class

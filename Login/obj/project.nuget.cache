@@ -1,8 +1,76 @@
 {
   "version": 2,
-  "dgSpecHash": "yIHOLv0dtM4=",
+  "dgSpecHash": "IjF/PNLFPk4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC\\source\\repos\\Login\\Login\\Login.vbproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "C:\\Users\\kristopher\\Source\\Repos\\desktop.system\\Login\\Login.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kristopher\\.nuget\\packages\\aforge\\2.2.5\\aforge.2.2.5.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\aforge.video\\2.2.5\\aforge.video.2.2.5.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\aforge.video.directshow\\2.2.5\\aforge.video.directshow.2.2.5.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\google.api.commonprotos\\2.7.0\\google.api.commonprotos.2.7.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\google.api.gax\\4.3.1\\google.api.gax.4.3.1.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\google.api.gax.grpc\\4.3.1\\google.api.gax.grpc.4.3.1.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\google.apis\\1.58.0\\google.apis.1.58.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\google.apis.auth\\1.58.0\\google.apis.auth.1.58.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\google.apis.core\\1.58.0\\google.apis.core.1.58.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\google.cloud.firestore\\3.3.0\\google.cloud.firestore.3.3.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\google.cloud.firestore.v1\\3.3.0\\google.cloud.firestore.v1.3.3.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\google.cloud.location\\2.0.0\\google.cloud.location.2.0.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\google.longrunning\\3.0.0\\google.longrunning.3.0.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\google.protobuf\\3.21.0\\google.protobuf.3.21.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\grpc.auth\\2.51.0\\grpc.auth.2.51.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\grpc.core.api\\2.51.0\\grpc.core.api.2.51.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\grpc.net.client\\2.51.0\\grpc.net.client.2.51.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\grpc.net.common\\2.51.0\\grpc.net.common.2.51.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.3\\microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\qrcoder\\1.7.0\\qrcoder.1.7.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\system.linq.async\\6.0.1\\system.linq.async.6.0.1.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\kristopher\\.nuget\\packages\\zxing.net\\0.16.10\\zxing.net.0.16.10.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'AForge 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\kristopher\\Source\\Repos\\desktop.system\\Login\\Login.vbproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\kristopher\\Source\\Repos\\desktop.system\\Login\\Login.vbproj",
+      "libraryId": "AForge",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'AForge.Video 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\kristopher\\Source\\Repos\\desktop.system\\Login\\Login.vbproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\kristopher\\Source\\Repos\\desktop.system\\Login\\Login.vbproj",
+      "libraryId": "AForge.Video",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'AForge.Video.DirectShow 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\kristopher\\Source\\Repos\\desktop.system\\Login\\Login.vbproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\kristopher\\Source\\Repos\\desktop.system\\Login\\Login.vbproj",
+      "libraryId": "AForge.Video.DirectShow",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
 }

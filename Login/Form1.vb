@@ -1,28 +1,49 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+﻿Imports Google.Cloud.Firestore
 
 Public Class Form1
-    Dim username As String
-    Dim password As String
+    ' ADD THIS - Initialize Firestore when form loads
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim pic As New Drawing2D.GraphicsPath
-        pic.AddEllipse(2, 2, 100, 100)
-        PictureBox1.Region = New Region(pic)
-
+        Try
+            FirestoreInventory.InitializeFirestore()
+        Catch ex As Exception
+            MessageBox.Show("Failed to initialize Firestore: " & ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
-    Private Sub btnlogin_Click(sender As Object, e As EventArgs) Handles btnlogin.Click
+    Private Async Sub btnlogin_Click(sender As Object, e As EventArgs) Handles btnlogin.Click
         Dim username As String = txtUsername.Text.Trim()
         Dim password As String = txtPassword.Text.Trim()
-        If username = "admin" And password = "admin" Then
-        ElseIf username = "user" And password = "1234" Then
-        Else
-        MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End If
-        Dashboard.Show()
-    End Sub
 
-    Friend Shared Function dt() As Object
-        Throw New NotImplementedException()
-    End Function
+        If String.IsNullOrEmpty(username) OrElse String.IsNullOrEmpty(password) Then
+            MessageBox.Show("Please enter both username and password.", "Missing Info", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        Try
+            ' ADD NULL CHECK
+            If FirestoreInventory.Db Is Nothing Then
+                MessageBox.Show("Database not initialized.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End If
+
+            Dim userDoc As DocumentReference = FirestoreInventory.Db.Collection("users").Document(username)
+            Dim snapshot As DocumentSnapshot = Await userDoc.GetSnapshotAsync()
+
+            If snapshot.Exists Then
+                Dim storedPassword As String = snapshot.GetValue(Of String)("password")
+
+                If password = storedPassword Then
+                    MessageBox.Show("Login successful!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Dashboard.Show()
+                    Me.Hide()
+                Else
+                    MessageBox.Show("Invalid password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            Else
+                MessageBox.Show("User not found.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error during login: " & ex.Message, "Firestore Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 End Class
