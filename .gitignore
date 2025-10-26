@@ -1,18 +1,27 @@
-<<<<<<< HEAD
-﻿# Build output
+# Build outputs
 bin/
 obj/
-*.exe
-*.dll
-*.pdb
-*.cache
-*.json
-*.log
-=======
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
 
-/Login.sln
+# Visual Studio files
 .vs/
->>>>>>> 98f95dd (Fix Firestore and QR references)
+*.user
+*.suo
+
+# Logs
+*.log
+
+# Packages
+packages/
+*.nupkg
+*.snupkg
+
+# Backup files
+*.bak
+
+# Temporary files
+*.tmp
+*.cache
+
+# Publish folders
+/publish/
+/out/
