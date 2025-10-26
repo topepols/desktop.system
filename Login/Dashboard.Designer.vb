@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Dashboard
     Inherits System.Windows.Forms.Form
 
@@ -26,7 +26,6 @@ Partial Class Dashboard
         Panel1 = New Panel()
         PictureBox1 = New PictureBox()
         logout = New LinkLabel()
-        btnrep = New Button()
         btnvent = New Button()
         btnhome = New Button()
         Label1 = New Label()
@@ -50,7 +49,6 @@ Partial Class Dashboard
         Panel1.BackColor = Color.SpringGreen
         Panel1.Controls.Add(PictureBox1)
         Panel1.Controls.Add(logout)
-        Panel1.Controls.Add(btnrep)
         Panel1.Controls.Add(btnvent)
         Panel1.Controls.Add(btnhome)
         Panel1.Location = New Point(0, 43)
@@ -83,18 +81,6 @@ Partial Class Dashboard
         logout.TabStop = True
         logout.Text = "Logout"
         logout.VisitedLinkColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        ' 
-        ' btnrep
-        ' 
-        btnrep.BackColor = Color.Peru
-        btnrep.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnrep.ForeColor = Color.Transparent
-        btnrep.Location = New Point(12, 276)
-        btnrep.Name = "btnrep"
-        btnrep.Size = New Size(131, 32)
-        btnrep.TabIndex = 1
-        btnrep.Text = "Reports"
-        btnrep.UseVisualStyleBackColor = False
         ' 
         ' btnvent
         ' 
@@ -177,13 +163,13 @@ Partial Class Dashboard
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = SystemColors.ButtonHighlight
         Label2.Location = New Point(178, 9)
         Label2.Name = "Label2"
-        Label2.Size = New Size(389, 25)
+        Label2.Size = New Size(468, 25)
         Label2.TabIndex = 10
-        Label2.Text = "Double JDG Inventory Management Systeem"
+        Label2.Text = "Double JDG Inventory Management System"
         ' 
         ' Label3
         ' 
@@ -198,6 +184,10 @@ Partial Class Dashboard
         ' 
         ' DataGridView2
         ' 
+        DataGridView2.AllowUserToAddRows = False
+        DataGridView2.AllowUserToDeleteRows = False
+        DataGridView2.AllowUserToResizeColumns = False
+        DataGridView2.AllowUserToResizeRows = False
         DataGridView2.Anchor = AnchorStyles.None
         DataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
@@ -214,8 +204,10 @@ Partial Class Dashboard
         DataGridView2.GridColor = Color.White
         DataGridView2.Location = New Point(184, 249)
         DataGridView2.Name = "DataGridView2"
+        DataGridView2.ReadOnly = True
         DataGridView2.RightToLeft = RightToLeft.No
         DataGridView2.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        DataGridView2.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
         DataGridView2.Size = New Size(588, 189)
         DataGridView2.TabIndex = 21
         ' 
@@ -248,7 +240,6 @@ Partial Class Dashboard
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents logout As LinkLabel
-    Friend WithEvents btnrep As Button
     Friend WithEvents btnvent As Button
     Friend WithEvents btnhome As Button
     Friend WithEvents Label1 As Label

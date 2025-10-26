@@ -120,13 +120,13 @@ Partial Class Form1
         ' 
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = SystemColors.ButtonHighlight
         Label3.Location = New Point(178, 9)
         Label3.Name = "Label3"
-        Label3.Size = New Size(389, 25)
+        Label3.Size = New Size(468, 25)
         Label3.TabIndex = 10
-        Label3.Text = "Double JDG Inventory Management Systeem"
+        Label3.Text = "Double JDG Inventory Management System"
         ' 
         ' Form1
         ' 

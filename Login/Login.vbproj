@@ -18,6 +18,10 @@
     <PackageReference Include="AForge.Video" Version="2.2.5" />
     <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
     <PackageReference Include="Google.Cloud.Firestore" Version="3.3.0" />
+<<<<<<< HEAD
+=======
+    <PackageReference Include="Newtonsoft.Json.Encryption" Version="2.2.0" />
+>>>>>>> f5bef54 (Update VB.NET project)
     <PackageReference Include="QRCoder" Version="1.7.0" />
     <PackageReference Include="ZXing.Net" Version="0.16.10" />
   </ItemGroup>

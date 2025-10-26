@@ -1,6 +1,9 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/Login.sln
-.vs/
+﻿# Build output
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.json
+*.log
