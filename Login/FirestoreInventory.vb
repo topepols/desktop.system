@@ -3,40 +3,34 @@
 Public Module FirestoreInventory
     Private firestoreDb As FirestoreDb
 
-    ' ✅ Initialize Firestore
+    ' ✅ Initialize Firestore (no notification)
     Public Sub InitializeFirestore()
         Try
-            ' Path to your Firebase service account key (JSON)
             Dim path As String = "C:\path\to\serviceAccountKey.json"
             Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", path)
-
             firestoreDb = FirestoreDb.Create("mobile-inventory-95f33")
-            MessageBox.Show("Firestore connected successfully!", "Connection", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Catch ex As Exception
-            MessageBox.Show("Error connecting to Firestore: " & ex.Message)
+        Catch
+            ' Silent fail — handled elsewhere if needed
         End Try
     End Sub
 
-    ' ✅ Add a new inventory item
+    ' ✅ Add a new inventory item (no notification)
     Public Async Sub AddInventoryItem(name As String, dateValue As String, price As String)
         Try
             Dim docRef As DocumentReference = firestoreDb.Collection("inventory").Document()
             Dim data As New Dictionary(Of String, Object) From {
-            {"id", docRef.Id},
-            {"name", name},
-            {"date", dateValue},
-            {"price", price}
-        }
-
+                {"id", docRef.Id},
+                {"name", name},
+                {"date", dateValue},
+                {"price", price}
+            }
             Await docRef.SetAsync(data)
-            MessageBox.Show("Item added to Firestore!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Catch ex As Exception
-            MessageBox.Show("Error adding item: " & ex.Message)
+        Catch
+            ' Silent fail
         End Try
     End Sub
 
-
-    ' ✅ Load all items into DataGridView
+    ' ✅ Load all items into DataGridView (no notification)
     Public Async Sub LoadInventory(dataGrid As DataGridView)
         Try
             dataGrid.Rows.Clear()
@@ -47,13 +41,12 @@ Public Module FirestoreInventory
                 Dim price = doc.GetValue(Of String)("price")
                 dataGrid.Rows.Add(name, dateValue, price)
             Next
-        Catch ex As Exception
-            MessageBox.Show("Error loading data: " & ex.Message)
+        Catch
+            ' Silent fail
         End Try
     End Sub
 
-
-    ' ✅ Update an existing item
+    ' ✅ Update an existing item (no notification)
     Public Async Sub UpdateInventoryItem(docId As String, name As String, dateValue As String, price As String)
         Try
             Dim docRef = firestoreDb.Collection("inventory").Document(docId)
@@ -62,25 +55,23 @@ Public Module FirestoreInventory
                 {"date", dateValue},
                 {"price", price}
             }
-
             Await docRef.UpdateAsync(updates)
-            MessageBox.Show("Item updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Catch ex As Exception
-            MessageBox.Show("Error updating item: " & ex.Message)
+        Catch
+            ' Silent fail
         End Try
     End Sub
 
-    ' ✅ Delete an item
+    ' ✅ Delete an item (no notification)
     Public Async Sub DeleteInventoryItem(docId As String)
         Try
             Dim docRef = firestoreDb.Collection("inventory").Document(docId)
             Await docRef.DeleteAsync()
-            MessageBox.Show("Item deleted from Firestore.", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Catch ex As Exception
-            MessageBox.Show("Error deleting item: " & ex.Message)
+        Catch
+            ' Silent fail
         End Try
     End Sub
-    ' 🔹 Add this at the end of the module (before End Module)
+
+    ' 🔹 Firestore database reference
     Public ReadOnly Property Db As FirestoreDb
         Get
             Return firestoreDb

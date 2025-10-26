@@ -62,6 +62,10 @@
               "target": "Package",
               "version": "[3.3.0, )"
             },
+            "Newtonsoft.Json.Encryption": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "QRCoder": {
               "target": "Package",
               "version": "[1.7.0, )"

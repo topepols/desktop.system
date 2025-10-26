@@ -365,6 +365,22 @@
           }
         }
       },
+      "Newtonsoft.Json.Encryption/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.Encryption.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.Encryption.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "QRCoder/1.7.0": {
         "type": "package",
         "dependencies": {
@@ -976,6 +992,20 @@
         "packageIcon.png"
       ]
     },
+    "Newtonsoft.Json.Encryption/2.2.0": {
+      "sha512": "C4+uGZVNVf+2tUDYAb8ctt9OkxY72BGw8jTE4Cfs2vuDjyfGT5+7ffO8mxL/C1zhZCFqt4ipxs6FesMl0eUs0w==",
+      "type": "package",
+      "path": "newtonsoft.json.encryption/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Newtonsoft.Json.Encryption.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.Encryption.xml",
+        "newtonsoft.json.encryption.2.2.0.nupkg.sha512",
+        "newtonsoft.json.encryption.nuspec"
+      ]
+    },
     "QRCoder/1.7.0": {
       "sha512": "6R3hQkayihGIDjp3F1nLRDBWG+nqahGyOY2+fH4Rll16Vad67oaUUfHkOiMWKiJFnGh+PIGDfUos+0R9m54O1g==",
       "type": "package",
@@ -1232,6 +1262,7 @@
       "AForge.Video >= 2.2.5",
       "AForge.Video.DirectShow >= 2.2.5",
       "Google.Cloud.Firestore >= 3.3.0",
+      "Newtonsoft.Json.Encryption >= 2.2.0",
       "QRCoder >= 1.7.0",
       "ZXing.Net >= 0.16.10"
     ]
@@ -1297,6 +1328,10 @@
           "Google.Cloud.Firestore": {
             "target": "Package",
             "version": "[3.3.0, )"
+          },
+          "Newtonsoft.Json.Encryption": {
+            "target": "Package",
+            "version": "[2.2.0, )"
           },
           "QRCoder": {
             "target": "Package",
