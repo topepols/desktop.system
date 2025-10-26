@@ -1,8 +1,6 @@
-# Build outputs
+# Ignore build and IDE folders
 bin/
 obj/
-
-# Visual Studio files
 .vs/
 *.user
 *.suo
@@ -10,18 +8,23 @@ obj/
 # Logs
 *.log
 
-# Packages
+# NuGet packages
 packages/
 *.nupkg
 *.snupkg
 
-# Backup files
+# Backup and temp files
 *.bak
-
-# Temporary files
 *.tmp
 *.cache
 
-# Publish folders
-/publish/
+# Publish or output
 /out/
+/publish/
+
+/*.dll
+/*.exe
+/*.pdb
+
+# Firebase credentials (important)
+serviceAccountKey.json
